@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HappyYF.Infrastructure.RepositoryFramework.RepositoryFactory">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RepositoryFramework\RepositoryFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HappyYF.Infrastructure.RepositoryFramework.Configuration.RepositorySettings">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>RepositoryFramework\Configuration\RepositorySettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HappyYF.Infrastructure.RepositoryFramework.Configuration.RepositoryMappingCollection">
+    <Position X="2.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAEIAAACAAAAAAAAAABAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>RepositoryFramework\Configuration\RepositoryMappingCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HappyYF.Infrastructure.RepositoryFramework.Configuration.RepositoryMappingConstants">
+    <Position X="0.5" Y="2" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAABACAAAACAAAAAgAAAAA=</HashCode>
+      <FileName>RepositoryFramework\Configuration\RepositoryMappingConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HappyYF.Infrastructure.RepositoryFramework.Configuration.RepositoryMappingElement">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>RepositoryFramework\Configuration\RepositoryMappingElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

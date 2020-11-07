@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GroupDataSet" targetNamespace="http://tempuri.org/GroupDataSet.xsd" xmlns:mstns="http://tempuri.org/GroupDataSet.xsd" xmlns="http://tempuri.org/GroupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HappyYF_YXConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HappyYF_YXConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HappyYF.YuanXin.Properties.Settings.GlobalReference.Default.HappyYF_YXConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ItemofserviceTableAdapter" GeneratorDataComponentClassName="ItemofserviceTableAdapter" Name="Itemofservice" UserDataComponentName="ItemofserviceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HappyYF_YXConnectionString (Settings)" DbObjectName="HappyYF_YX.dbo.Itemofservice" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ItemofserviceNumber, ItemofserviceName, Unit_price, Remarks
+FROM Itemofservice
+WHERE (ItemofserviceNumber NOT IN
+          (SELECT ItemofserviceNumber
+         FROM YX_group_detail))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemofserviceNumber" DataSetColumn="ItemofserviceNumber" />
+              <Mapping SourceColumn="ItemofserviceName" DataSetColumn="ItemofserviceName" />
+              <Mapping SourceColumn="Unit_price" DataSetColumn="Unit_price" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="YX_group_SETTableAdapter" GeneratorDataComponentClassName="YX_group_SETTableAdapter" Name="YX_group_SET" UserDataComponentName="YX_group_SETTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HappyYF_YXConnectionString (Settings)" DbObjectName="HappyYF_YX.dbo.YX_group_main" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT '-1' AS parentId, GroupName AS nowID, GroupName AS nowName
+FROM YX_group_main
+UNION ALL
+SELECT a.GroupName AS parentId, a.ItemofserviceNumber AS nowID, 
+      '[' + a.ItemofserviceNumber + ']' + ISNULL(b.ItemofserviceName, '') 
+      + '(' + CAST(ISNULL(b.Unit_price, 0) AS varchar(10)) + ')' + ISNULL(b.Remarks, '') 
+      AS nowName
+FROM YX_group_detail AS a LEFT OUTER JOIN
+      Itemofservice AS b ON a.ItemofserviceNumber = b.ItemofserviceNumber</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="parentId" DataSetColumn="parentId" />
+              <Mapping SourceColumn="nowID" DataSetColumn="nowID" />
+              <Mapping SourceColumn="nowName" DataSetColumn="nowName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GroupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="GroupDataSet" msprop:Generator_DataSetName="GroupDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Itemofservice" msprop:Generator_UserTableName="Itemofservice" msprop:Generator_RowDeletedName="ItemofserviceRowDeleted" msprop:Generator_RowChangedName="ItemofserviceRowChanged" msprop:Generator_RowClassName="ItemofserviceRow" msprop:Generator_RowChangingName="ItemofserviceRowChanging" msprop:Generator_RowEvArgName="ItemofserviceRowChangeEvent" msprop:Generator_RowEvHandlerName="ItemofserviceRowChangeEventHandler" msprop:Generator_TableClassName="ItemofserviceDataTable" msprop:Generator_TableVarName="tableItemofservice" msprop:Generator_RowDeletingName="ItemofserviceRowDeleting" msprop:Generator_TablePropName="Itemofservice">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemofserviceNumber" msprop:Generator_UserColumnName="ItemofserviceNumber" msprop:Generator_ColumnVarNameInTable="columnItemofserviceNumber" msprop:Generator_ColumnPropNameInRow="ItemofserviceNumber" msprop:Generator_ColumnPropNameInTable="ItemofserviceNumberColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemofserviceName" msprop:Generator_UserColumnName="ItemofserviceName" msprop:Generator_ColumnVarNameInTable="columnItemofserviceName" msprop:Generator_ColumnPropNameInRow="ItemofserviceName" msprop:Generator_ColumnPropNameInTable="ItemofserviceNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit_price" msprop:Generator_UserColumnName="Unit_price" msprop:Generator_ColumnVarNameInTable="columnUnit_price" msprop:Generator_ColumnPropNameInRow="Unit_price" msprop:Generator_ColumnPropNameInTable="Unit_priceColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_UserColumnName="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="YX_group_SET" msprop:Generator_UserTableName="YX_group_SET" msprop:Generator_RowDeletedName="YX_group_SETRowDeleted" msprop:Generator_RowChangedName="YX_group_SETRowChanged" msprop:Generator_RowClassName="YX_group_SETRow" msprop:Generator_RowChangingName="YX_group_SETRowChanging" msprop:Generator_RowEvArgName="YX_group_SETRowChangeEvent" msprop:Generator_RowEvHandlerName="YX_group_SETRowChangeEventHandler" msprop:Generator_TableClassName="YX_group_SETDataTable" msprop:Generator_TableVarName="tableYX_group_SET" msprop:Generator_RowDeletingName="YX_group_SETRowDeleting" msprop:Generator_TablePropName="YX_group_SET">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="parentId" msdata:ReadOnly="true" msprop:Generator_UserColumnName="parentId" msprop:Generator_ColumnPropNameInRow="parentId" msprop:Generator_ColumnVarNameInTable="columnparentId" msprop:Generator_ColumnPropNameInTable="parentIdColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nowID" msdata:ReadOnly="true" msprop:Generator_UserColumnName="nowID" msprop:Generator_ColumnPropNameInRow="nowID" msprop:Generator_ColumnVarNameInTable="columnnowID" msprop:Generator_ColumnPropNameInTable="nowIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nowName" msdata:ReadOnly="true" msprop:Generator_UserColumnName="nowName" msprop:Generator_ColumnPropNameInRow="nowName" msprop:Generator_ColumnVarNameInTable="columnnowName" msprop:Generator_ColumnPropNameInTable="nowNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Itemofservice" />
+      <xs:field xpath="mstns:ItemofserviceNumber" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,241 @@
+<?xml version='1.0'?>
+<!--Informação sobre layout do relatório-->
+<KReport Autor="Fernado Gregorio Borges" Version="0.0.0.1">
+  <Page PaperName="A4" Height="1122" Width="794" MarginTop="0" MarginBottom="0" MarginLeft="0" MarginRigth="0" LandScape="False" MasterDataSource="DataSourceTeste2" />
+  <Band Type="BandTitle" Name="Title" Top="0" Height="287">
+    <control Name="RLabel1" Type="RLabel" BackColor="White" ForeColor="Black" xRelative="0" yRelative="33" Index="0" Text="Gerador de Relatório para .NET" Alignment="2">
+      <Position Top="33" Left="244" Height="20" Width="290" />
+      <Font Name="Microsoft Sans Serif" Size="10" Height="16" FontStyle="Regular" />
+    </control>
+    <control Name="RShape2" Type="RShape" BackColor="Olive" ForeColor="ControlText" xRelative="0" yRelative="71" Index="0" BorderColor="White" BorderWidth="0">
+      <Position Top="71" Left="1" Height="30" Width="234" />
+    </control>
+    <control Name="RShape1" Type="RShape" BackColor="ActiveCaption" ForeColor="ControlText" xRelative="0" yRelative="105" Index="0" BorderColor="0" BorderWidth="0">
+      <Position Top="105" Left="1" Height="31" Width="786" />
+    </control>
+    <control Name="RBarCode2" Type="RBarCode" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="138" Index="1" Text="" Code="012345678901" BarCodeType="7">
+      <Position Top="138" Left="340" Height="106" Width="155" />
+      <Font Name="宋体" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+    <control Name="RLabel2" Type="RLabel" BackColor="White" ForeColor="ControlText" xRelative="0" yRelative="56" Index="1" Text="Isto é apenas um teste" Alignment="3">
+      <Position Top="56" Left="651" Height="15" Width="142" />
+      <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+    </control>
+    <control Name="RSystem2" Type="RSystem" BackColor="White" ForeColor="ControlText" xRelative="0" yRelative="1" Index="1" Text="29-35-2010 08:11:35" Alignment="2" SystemType="2">
+      <Position Top="1" Left="681" Height="15" Width="112" />
+      <Font Name="宋体" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+    <control Name="RLabel15" Type="RLabel" BackColor="White" ForeColor="Black" xRelative="0" yRelative="4" Index="1" Text="Fernando Gregorio Borges" Alignment="2">
+      <Position Top="4" Left="198" Height="20" Width="388" />
+      <Font Name="Arial" Size="10" Height="16" FontStyle="Bold" />
+    </control>
+    <control Name="RBarCode1" Type="RBarCode" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="136" Index="1" Text="" Code="0123456789012" BarCodeType="0">
+      <Position Top="136" Left="624" Height="106" Width="137" />
+      <Font Name="宋体" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+    <control Name="RBarCode3" Type="RBarCode" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="137" Index="1" Text="" Code="213201234567898909768909" BarCodeType="3">
+      <Position Top="137" Left="2" Height="57" Width="245" />
+      <Font Name="宋体" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+    <control Name="RBarCode4" Type="RBarCode" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="209" Index="1" Text="" Code="0123456789" BarCodeType="2">
+      <Position Top="209" Left="14" Height="71" Width="202" />
+      <Font Name="宋体" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+    <control Name="RDBLabel13" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="259" Index="1" Text="Fernando0" Alignment="2" FieldName="Nome" DataSource="ListaPessoa" FormatString="">
+      <Position Top="259" Left="503" Height="13" Width="226" />
+      <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+    </control>
+    <control Name="RDBLabel6" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="65" Index="1" Text="Isto ?apenas um teste0" Alignment="2" FieldName="Descricao" DataSource="DataSourceTeste2" FormatString="">
+      <Position Top="65" Left="295" Height="14" Width="195" />
+      <Font Name="Microsoft Sans Serif" Size="5" Height="8" FontStyle="Regular" />
+    </control>
+    <control Name="RDBBarCode1" Type="RDBBarCode" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="137" Index="1" Text="" Code="7896472502172" BarCodeType="0" FieldName="BarCode" DataSource="ListaPessoa">
+      <Position Top="137" Left="486" Height="107" Width="136" />
+      <Font Name="宋体" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+  </Band>
+  <Band Type="BandHeader" Name="Header" Top="303" Height="70">
+    <control Name="RLine1" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="65" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="368" Left="2" Height="5" Width="789" />
+    </control>
+    <control Name="RLabel3" Type="RLabel" BackColor="White" ForeColor="Black" xRelative="0" yRelative="31" Index="1" Text="Gerador de Relatórios" Alignment="2">
+      <Position Top="334" Left="282" Height="25" Width="201" />
+      <Font Name="Tahoma" Size="12" Height="20" FontStyle="Regular" />
+    </control>
+    <control Name="RSystem1" Type="RSystem" BackColor="White" ForeColor="ControlText" xRelative="0" yRelative="8" Index="1" Text="Pagina 2" Alignment="2" SystemType="3">
+      <Position Top="311" Left="715" Height="16" Width="68" />
+      <Font Name="宋体" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+    <control Name="RDBLabel12" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="29" Index="1" Text="2010-11-29 20:35:10" Alignment="2" FieldName="Data" DataSource="DataSourceTeste2" FormatString="">
+      <Position Top="332" Left="679" Height="15" Width="102" />
+      <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+    </control>
+  </Band>
+  <Band Type="BandDetail" Name="Detalhe" Top="524" Height="15">
+    <control Name="RDBLabel1" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="1" Index="1" Text="06140" Alignment="1" FieldName="Credito" DataSource="DataSourceTeste" FormatString="{0:D5}">
+      <Position Top="525" Left="29" Height="14" Width="55" />
+      <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+    </control>
+    <control Name="RDBLabel11" Type="RDBLabel" BackColor="White" ForeColor="ControlText" xRelative="0" yRelative="0" Index="1" Text="SEGURADO GIRO ATUAL" Alignment="2" FieldName="Produto" DataSource="DataSourceTeste" FormatString="">
+      <Position Top="524" Left="89" Height="14" Width="178" />
+      <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+    </control>
+    <control Name="RDBLabel2" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="1" Index="1" Text="27/11/2003" Alignment="2" FieldName="DtLiberacao" DataSource="DataSourceTeste" FormatString="dd/MM/yyyy">
+      <Position Top="525" Left="583" Height="13" Width="64" />
+      <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+    </control>
+    <control Name="RDBLabel5" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="1" Index="1" Text="CEAPE" Alignment="2" FieldName="Fundo" DataSource="DataSourceTeste" FormatString="">
+      <Position Top="525" Left="273" Height="14" Width="78" />
+      <Font Name="Arial" Size="8" Height="13" FontStyle="Regular" />
+    </control>
+    <control Name="RDBLabel4" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="1" Index="1" Text="903,43" Alignment="3" FieldName="VlAutorizado" DataSource="DataSourceTeste" FormatString="{0:n2}">
+      <Position Top="525" Left="689" Height="13" Width="99" />
+      <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Italic" />
+    </control>
+  </Band>
+  <Band Type="BandFooder" Name="Fooder" Top="690" Height="20">
+    <control Name="RLine2" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="0" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="690" Left="1" Height="5" Width="789" />
+    </control>
+    <control Name="RDBCalculated5" Type="RDBCalculated" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="2" Index="1" Text="0.00" Alignment="3" FieldName="VlAutorizado" DataSource="DataSourceTeste" FormatString="{0:N2}" Calculated="4">
+      <Position Top="692" Left="669" Height="16" Width="117" />
+      <Font Name="Arial" Size="10" Height="16" FontStyle="Bold" />
+    </control>
+    <control Name="RLabel12" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="3" Index="1" Text="Total Rodape" Alignment="1">
+      <Position Top="693" Left="1" Height="13" Width="94" />
+      <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Bold" />
+    </control>
+  </Band>
+  <Band Type="BandSummary" Name="Summary" Top="726" Height="17">
+    <control Name="RDBCalculated9" Type="RDBCalculated" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="0" Index="1" Text="0.00" Alignment="3" FieldName="VlAutorizado" DataSource="DataSourceTeste" FormatString="{0:N2}" Calculated="4">
+      <Position Top="726" Left="671" Height="14" Width="119" />
+      <Font Name="Arial" Size="10" Height="16" FontStyle="Bold" />
+    </control>
+    <control Name="RLabel9" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="1" Index="1" Text="Total Geral:" Alignment="1">
+      <Position Top="727" Left="2" Height="15" Width="113" />
+      <Font Name="Arial" Size="10" Height="16" FontStyle="Bold" />
+    </control>
+  </Band>
+  <BandGroup Type="BandGroup" Name="" Top="0" FieldName="Produto">
+    <BandGroupHeader Type="BandGroupHeader" Name="Group Header - Produto" Top="389" Height="54">
+      <control Name="RLine6" Type="RLine" BackColor="White" ForeColor="Red" xRelative="0" yRelative="51" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+        <Position Top="440" Left="3" Height="6" Width="788" />
+      </control>
+      <control Name="RLabel5" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="10" Index="1" Text="Produto" Alignment="1">
+        <Position Top="399" Left="8" Height="15" Width="77" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Bold" />
+      </control>
+      <control Name="RLabel10" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="37" Index="1" Text="Fundo" Alignment="2">
+        <Position Top="426" Left="252" Height="14" Width="75" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+      <control Name="RLabel17" Type="RLabel" BackColor="White" ForeColor="ControlText" xRelative="0" yRelative="38" Index="1" Text="Produto" Alignment="1">
+        <Position Top="427" Left="96" Height="13" Width="66" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+      <control Name="RLabel11" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="35" Index="1" Text="Unidade" Alignment="2">
+        <Position Top="424" Left="365" Height="16" Width="179" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+      <control Name="RLabel16" Type="RLabel" BackColor="White" ForeColor="ControlText" xRelative="0" yRelative="37" Index="1" Text="Data" Alignment="2">
+        <Position Top="426" Left="587" Height="14" Width="57" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+      <control Name="RDBLabel3" Type="RDBLabel" BackColor="White" ForeColor="ControlText" xRelative="0" yRelative="13" Index="1" Text="SEGURADO GIRO ATUAL" Alignment="1" FieldName="Produto" DataSource="DataSourceTeste" FormatString="">
+        <Position Top="402" Left="255" Height="15" Width="178" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+      <control Name="RLabel18" Type="RLabel" BackColor="White" ForeColor="ControlText" xRelative="0" yRelative="38" Index="1" Text="Valor" Alignment="2">
+        <Position Top="427" Left="737" Height="13" Width="39" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+    </BandGroupHeader>
+    <BandGroupFooder Type="BandGroupFooder" Name="Group Footer - Produto" Top="644" Height="30">
+      <control Name="RLine4" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="0" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+        <Position Top="644" Left="4" Height="5" Width="783" />
+      </control>
+      <control Name="RLabel6" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="4" Index="1" Text="Total Produto:" Alignment="1">
+        <Position Top="648" Left="9" Height="16" Width="93" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Bold" />
+      </control>
+      <control Name="RDBLabel7" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="5" Index="1" Text="SEGIROGRUP 1" Alignment="1" FieldName="Produto" DataSource="DataSourceTeste" FormatString="">
+        <Position Top="649" Left="111" Height="14" Width="179" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Bold" />
+      </control>
+      <control Name="RDBCalculated4" Type="RDBCalculated" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="5" Index="1" Text="10991,78" Alignment="3" FieldName="VlAutorizado" DataSource="DataSourceTeste" FormatString="{0:N2}" Calculated="4">
+        <Position Top="649" Left="670" Height="14" Width="116" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Bold" />
+      </control>
+      <control Name="RDBCalculated8" Type="RDBCalculated" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="3" Index="1" Text="15" Alignment="2" FieldName="Produto" DataSource="DataSourceTeste" FormatString="" Calculated="0">
+        <Position Top="647" Left="313" Height="15" Width="50" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Bold" />
+      </control>
+    </BandGroupFooder>
+  </BandGroup>
+  <BandGroup Type="BandGroup" Name="" Top="0" FieldName="Fundo">
+    <BandGroupHeader Type="BandGroupHeader" Name="Group Header - Fundo" Top="459" Height="18">
+      <control Name="RDBLabel8" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="2" Index="1" Text="CEAPE" Alignment="1" FieldName="Fundo" DataSource="DataSourceTeste" FormatString="">
+        <Position Top="461" Left="88" Height="15" Width="186" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Bold" />
+      </control>
+      <control Name="RLabel7" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="1" Index="1" Text="Fundo" Alignment="1">
+        <Position Top="460" Left="26" Height="17" Width="47" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Bold" />
+      </control>
+    </BandGroupHeader>
+    <BandGroupFooder Type="BandGroupFooder" Name="Group Footer - Fundo" Top="589" Height="39">
+      <control Name="RLine3" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="0" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+        <Position Top="589" Left="23" Height="10" Width="763" />
+      </control>
+      <control Name="RDBCalculated6" Type="RDBCalculated" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="5" Index="1" Text="0" Alignment="3" FieldName="VlAutorizado" DataSource="DataSourceTeste" FormatString="" Calculated="4">
+        <Position Top="594" Left="696" Height="14" Width="93" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+      <control Name="RLabel8" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="4" Index="1" Text="Total Fundo" Alignment="1">
+        <Position Top="593" Left="29" Height="13" Width="78" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Bold" />
+      </control>
+      <control Name="RDBCalculated1" Type="RDBCalculated" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="5" Index="1" Text="0" Alignment="1" FieldName="Credito" DataSource="DataSourceTeste" FormatString="" Calculated="0">
+        <Position Top="594" Left="414" Height="14" Width="147" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Bold" />
+      </control>
+      <control Name="RDBLabel9" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="4" Index="1" Text="CEAPE" Alignment="1" FieldName="Fundo" DataSource="DataSourceTeste" FormatString="">
+        <Position Top="593" Left="110" Height="15" Width="152" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+      <control Name="RDBCalculated7" Type="RDBCalculated" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="4" Index="1" Text="0" Alignment="2" FieldName="VlAutorizado" DataSource="DataSourceTeste" FormatString="" Calculated="0">
+        <Position Top="593" Left="577" Height="14" Width="93" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+      <control Name="RDBCalculated3" Type="RDBCalculated" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="4" Index="1" Text="0" Alignment="2" FieldName="Fundo" DataSource="DataSourceTeste" FormatString="" Calculated="0">
+        <Position Top="593" Left="266" Height="15" Width="55" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+    </BandGroupFooder>
+  </BandGroup>
+  <BandGroup Type="BandGroup" Name="" Top="0" FieldName="Credito">
+    <BandGroupHeader Type="BandGroupHeader" Name="Group Header - Credito" Top="493" Height="15">
+      <control Name="RDBLabel10" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="3" Index="1" Text="6140" Alignment="2" FieldName="Credito" DataSource="DataSourceTeste" FormatString="">
+        <Position Top="496" Left="98" Height="11" Width="62" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+      <control Name="RLabel13" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="0" Index="1" Text="Credito" Alignment="1">
+        <Position Top="493" Left="32" Height="14" Width="50" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+    </BandGroupHeader>
+    <BandGroupFooder Type="BandGroupFooder" Name="Group Footer - Credito" Top="555" Height="18">
+      <control Name="RLine5" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="0" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+        <Position Top="555" Left="24" Height="5" Width="763" />
+      </control>
+      <control Name="RDBCalculated2" Type="RDBCalculated" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="2" Index="1" Text="3" Alignment="2" FieldName="Produto" DataSource="DataSourceTeste" FormatString="" Calculated="0">
+        <Position Top="557" Left="128" Height="15" Width="50" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Bold" />
+      </control>
+      <control Name="RLabel14" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="1" Index="1" Text="Total Credito" Alignment="1">
+        <Position Top="556" Left="31" Height="15" Width="70" />
+        <Font Name="Microsoft Sans Serif" Size="8" Height="13" FontStyle="Regular" />
+      </control>
+    </BandGroupFooder>
+  </BandGroup>
+</KReport>

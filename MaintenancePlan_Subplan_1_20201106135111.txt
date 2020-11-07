@@ -1,0 +1,19 @@
+Microsoft(R) Server Maintenance Utility (Unicode) Version 15.0.2070
+报告是在“HAPPY03”上生成的。
+维护计划: MaintenancePlan
+持续时间: 00:01:34
+状态: 成功。
+详细信息:
+备份数据库(完整) (HAPPY03)
+备份数据库所在的位置: 本地服务器连接
+数据库: happyYF_ly
+类型: 完整
+追加现有
+任务开始: 2020-11-06T13:49:37。
+任务结束: 2020-11-06T13:51:11。
+成功
+命令:BACKUP DATABASE [happyYF_ly] TO  DISK = N''E:\Work\ZY_ERP\happyYF_ly_backup_2020_11_06_134937_9520515.bak'' WITH NOFORMAT, NOINIT,  NAME = N''happyYF_ly_backup_2020_11_06_134937_9520515'', SKIP, REWIND, NOUNLOAD,  STATS = 10
+
+GO
+
+

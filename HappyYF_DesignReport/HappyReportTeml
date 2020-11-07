@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<!--Informação sobre layout do relatório-->
+<KReport Autor="Fernado Gregorio Borges" Version="0.0.0.1">
+  <Page PaperName="A4" Height="1123" Width="794" MarginTop="38" MarginBottom="38" MarginLeft="38" MarginRigth="38" LandScape="False" MasterDataSource="" />
+  <Band Type="BandTitle" Name="表头" Top="0" Height="30">
+    <control Name="RLabel2" Type="RLabel" BackColor="White" ForeColor="ControlText" xRelative="270" yRelative="8" Index="1" Text="" Alignment="2">
+      <Position Top="8" Left="270" Height="20" Width="165" />
+      <Font Name="宋体" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+  </Band>
+  <Band Type="BandDetail" Name="细节区" Top="46" Height="50">
+    <control Name="RLabel1" Type="RLabel" BackColor="White" ForeColor="ControlText" xRelative="307" yRelative="13" Index="1" Text="" Alignment="2">
+      <Position Top="59" Left="307" Height="10" Width="30" />
+      <Font Name="宋体" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+  </Band>
+</KReport>

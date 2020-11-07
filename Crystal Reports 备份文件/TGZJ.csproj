@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E31A4BB-A244-42D4-9A4C-2E2263B82820}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TGZJ</RootNamespace>
+    <AssemblyName>TGZJ</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <ApplicationIcon>zblogo.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\Administrator\Desktop\Pub\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <InstallUrl>http://192.168.1.9:88/</InstallUrl>
+    <UpdateUrl>http://192.168.1.9:88/</UpdateUrl>
+    <SupportUrl>http://192.168.1.9:88/</SupportUrl>
+    <ProductName>中原精密</ProductName>
+    <PublisherName>中原精密</PublisherName>
+    <MinimumRequiredVersion>1.0.0.1329</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>1330</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2587FBF97E564E61004DD04927774F913E1E761E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TGZJ_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\ToolClass.cs" />
+    <Compile Include="Base\User.cs" />
+    <Compile Include="Base\ButtonMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\ButtonMenu.Designer.cs">
+      <DependentUpon>ButtonMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\BumenDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BumenDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\DayWorkReport.cs">
+      <DependentUpon>DayWorkReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\DayWorkReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DayWorkReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\InformDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\IN_Database.cs" />
+    <Compile Include="LY_sales_outNoaccceptInform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LY_sales_outNoaccceptInform.Designer.cs">
+      <DependentUpon>LY_sales_outNoaccceptInform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\MachineAuthorization.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MachineAuthorization.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\ShouquanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShouquanDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\SQLDataBase.cs" />
+    <Compile Include="DATA\YonghuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YonghuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DayReport\BzCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BzCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DayReport\DayReportCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DayReportCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DayReport\DayWorkReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DayReport\DayWorkReport.Designer.cs">
+      <DependentUpon>DayWorkReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DayReport\JklCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JklCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DayReport\LllhslCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LllhslCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DayReport\SbkcsjCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SbkcsjCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DayReport\YltrCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YltrCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DayReport\ZyclxhCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZyclxhCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HappyYF_ZBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HappyYF_ZBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Image\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LY_sales_outInform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LY_sales_outInform.Designer.cs">
+      <DependentUpon>LY_sales_outInform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manger\Bumen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manger\Bumen.Designer.cs">
+      <DependentUpon>Bumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manger\BumenMingxi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manger\BumenMingxi.Designer.cs">
+      <DependentUpon>BumenMingxi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manger\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manger\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manger\CPUAuthorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manger\CPUAuthorization.designer.cs">
+      <DependentUpon>CPUAuthorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manger\QuanxianFenpei.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manger\QuanxianFenpei.Designer.cs">
+      <DependentUpon>QuanxianFenpei.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manger\Yonghu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manger\Yonghu.Designer.cs">
+      <DependentUpon>Yonghu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ItemOfService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ItemOfService.Designer.cs">
+      <DependentUpon>ItemOfService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Base\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\ButtonMenu.resx">
+      <DependentUpon>ButtonMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LY_sales_outNoaccceptInform.resx">
+      <DependentUpon>LY_sales_outNoaccceptInform.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayReport\BzCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BzCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayReport\DayReportCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DayReportCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayReport\DayWorkReport.resx">
+      <DependentUpon>DayWorkReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayReport\JklCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>JklCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayReport\LllhslCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LllhslCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayReport\SbkcsjCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SbkcsjCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayReport\YltrCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>YltrCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayReport\ZyclxhCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ZyclxhCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LY_sales_outInform.resx">
+      <DependentUpon>LY_sales_outInform.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manger\Bumen.resx">
+      <DependentUpon>Bumen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manger\BumenMingxi.resx">
+      <DependentUpon>BumenMingxi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manger\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manger\CPUAuthorization.resx">
+      <DependentUpon>CPUAuthorization.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manger\QuanxianFenpei.resx">
+      <DependentUpon>QuanxianFenpei.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manger\Yonghu.resx">
+      <DependentUpon>Yonghu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ItemOfService.resx">
+      <DependentUpon>ItemOfService.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterCode.resx">
+      <DependentUpon>RegisterCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetProbationDate.resx">
+      <DependentUpon>SetProbationDate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DATA\BumenDataSet.xsc">
+      <DependentUpon>BumenDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\BumenDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BumenDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATA\BumenDataSet.xss">
+      <DependentUpon>BumenDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATA\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\DayWorkReport.xsc">
+      <DependentUpon>DayWorkReport.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\DayWorkReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DayWorkReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATA\DayWorkReport.xss">
+      <DependentUpon>DayWorkReport.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\ShouquanDataSet.xsc">
+      <DependentUpon>ShouquanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\ShouquanDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShouquanDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATA\ShouquanDataSet.xss">
+      <DependentUpon>ShouquanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\YonghuDataSet.xsc">
+      <DependentUpon>YonghuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\YonghuDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YonghuDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATA\YonghuDataSet.xss">
+      <DependentUpon>YonghuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ERP开发时间安排ERP_Develop2019.xlsx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RegisterCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterCode.Designer.cs">
+      <DependentUpon>RegisterCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetProbationDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetProbationDate.Designer.cs">
+      <DependentUpon>SetProbationDate.cs</DependentUpon>
+    </Compile>
+    <None Include="TGZJ_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\MainBackground.jpg" />
+    <Content Include="zblogo.ico" />
+    <None Include="DATA\InformDataSet.xsc">
+      <DependentUpon>InformDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\InformDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InformDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATA\InformDataSet.xss">
+      <DependentUpon>InformDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\MachineAuthorization.xsc">
+      <DependentUpon>MachineAuthorization.xsd</DependentUpon>
+    </None>
+    <None Include="DATA\MachineAuthorization.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MachineAuthorization.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATA\MachineAuthorization.xss">
+      <DependentUpon>MachineAuthorization.xsd</DependentUpon>
+    </None>
+    <None Include="HappyYF_ZBDataSet.xsc">
+      <DependentUpon>HappyYF_ZBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HappyYF_ZBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HappyYF_ZBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HappyYF_ZBDataSet.xss">
+      <DependentUpon>HappyYF_ZBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\btnBgnd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HappyYF.Infrastructure.Repositories\HappyYF.Infrastructure.Repositories.csproj">
+      <Project>{3E8AEDD9-0512-4FFF-9BB0-1B0E8CCB3861}</Project>
+      <Name>HappyYF.Infrastructure.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HappyYF.Infrastructure\HappyYF.Infrastructure.csproj">
+      <Project>{56AF0C03-BF11-4CEE-B874-65C5806E1A51}</Project>
+      <Name>HappyYF.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HappyYF.Model\HappyYF.Model.csproj">
+      <Project>{658EED9C-87DB-4CFC-B172-318DDCCA7D94}</Project>
+      <Name>HappyYF.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HappyYF.YuanXin\HappyYF.YuanXin.csproj">
+      <Project>{AEECFA99-BBBB-46D2-8862-665914DE3808}</Project>
+      <Name>HappyYF.YuanXin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project_Manager\Project_Manager.csproj">
+      <Project>{6AE26527-67A1-4F0C-949C-764E6835B4CC}</Project>
+      <Name>Project_Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RemoteBackupTool\RemoteBackupTool.csproj">
+      <Project>{8F3EDA4D-9872-4B6F-8BAC-DA4BAA31811B}</Project>
+      <Name>RemoteBackupTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToolBox\ToolBox.csproj">
+      <Project>{D937E1F4-1B9F-4567-B28E-EED24AA31C9C}</Project>
+      <Name>ToolBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="office">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

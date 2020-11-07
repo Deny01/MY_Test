@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FilterDataSet" targetNamespace="http://tempuri.org/FilterDataSet.xsd" xmlns:mstns="http://tempuri.org/FilterDataSet.xsd" xmlns="http://tempuri.org/FilterDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Denynew_chyConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Denynew_chyConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DataGridFilter.Properties.Settings.GlobalReference.Default.Denynew_chyConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FilterDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="FilterDataSet" msprop:Generator_UserDSName="FilterDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FilterTable" msprop:Generator_UserTableName="FilterTable" msprop:Generator_RowEvArgName="FilterTableRowChangeEvent" msprop:Generator_TableVarName="tableFilterTable" msprop:Generator_TablePropName="FilterTable" msprop:Generator_RowDeletingName="FilterTableRowDeleting" msprop:Generator_RowChangingName="FilterTableRowChanging" msprop:Generator_RowDeletedName="FilterTableRowDeleted" msprop:Generator_RowEvHandlerName="FilterTableRowChangeEventHandler" msprop:Generator_TableClassName="FilterTableDataTable" msprop:Generator_RowChangedName="FilterTableRowChanged" msprop:Generator_RowClassName="FilterTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="字段" msprop:Generator_ColumnVarNameInTable="column字段" msprop:Generator_ColumnPropNameInRow="字段" msprop:Generator_ColumnPropNameInTable="字段Column" msprop:Generator_UserColumnName="字段" type="xs:string" minOccurs="0" />
+              <xs:element name="关系" msprop:Generator_ColumnVarNameInTable="column关系" msprop:Generator_ColumnPropNameInRow="关系" msprop:Generator_ColumnPropNameInTable="关系Column" msprop:Generator_UserColumnName="关系" type="xs:string" minOccurs="0" />
+              <xs:element name="数值" msprop:Generator_ColumnVarNameInTable="column数值" msprop:Generator_ColumnPropNameInRow="数值" msprop:Generator_ColumnPropNameInTable="数值Column" msprop:Generator_UserColumnName="数值" type="xs:string" minOccurs="0" />
+              <xs:element name="逻辑" msprop:Generator_ColumnVarNameInTable="column逻辑" msprop:Generator_ColumnPropNameInRow="逻辑" msprop:Generator_ColumnPropNameInTable="逻辑Column" msprop:Generator_UserColumnName="逻辑" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OperationTable" msprop:Generator_UserTableName="OperationTable" msprop:Generator_RowEvArgName="OperationTableRowChangeEvent" msprop:Generator_TableVarName="tableOperationTable" msprop:Generator_TablePropName="OperationTable" msprop:Generator_RowDeletingName="OperationTableRowDeleting" msprop:Generator_RowChangingName="OperationTableRowChanging" msprop:Generator_RowDeletedName="OperationTableRowDeleted" msprop:Generator_RowEvHandlerName="OperationTableRowChangeEventHandler" msprop:Generator_TableClassName="OperationTableDataTable" msprop:Generator_RowChangedName="OperationTableRowChanged" msprop:Generator_RowClassName="OperationTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Operation" msprop:Generator_ColumnVarNameInTable="columnOperation" msprop:Generator_ColumnPropNameInRow="Operation" msprop:Generator_ColumnPropNameInTable="OperationColumn" msprop:Generator_UserColumnName="Operation" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ColumnNameTable" msprop:Generator_UserTableName="ColumnNameTable" msprop:Generator_RowEvArgName="ColumnNameTableRowChangeEvent" msprop:Generator_TableVarName="tableColumnNameTable" msprop:Generator_TablePropName="ColumnNameTable" msprop:Generator_RowDeletingName="ColumnNameTableRowDeleting" msprop:Generator_RowChangingName="ColumnNameTableRowChanging" msprop:Generator_RowDeletedName="ColumnNameTableRowDeleted" msprop:Generator_RowEvHandlerName="ColumnNameTableRowChangeEventHandler" msprop:Generator_TableClassName="ColumnNameTableDataTable" msprop:Generator_RowChangedName="ColumnNameTableRowChanged" msprop:Generator_RowClassName="ColumnNameTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ColumnName" msprop:Generator_ColumnVarNameInTable="columnColumnName" msprop:Generator_ColumnPropNameInRow="ColumnName" msprop:Generator_ColumnPropNameInTable="ColumnNameColumn" msprop:Generator_UserColumnName="ColumnName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LogicTable" msprop:Generator_UserTableName="LogicTable" msprop:Generator_RowEvArgName="LogicTableRowChangeEvent" msprop:Generator_TableVarName="tableLogicTable" msprop:Generator_TablePropName="LogicTable" msprop:Generator_RowDeletingName="LogicTableRowDeleting" msprop:Generator_RowChangingName="LogicTableRowChanging" msprop:Generator_RowDeletedName="LogicTableRowDeleted" msprop:Generator_RowEvHandlerName="LogicTableRowChangeEventHandler" msprop:Generator_TableClassName="LogicTableDataTable" msprop:Generator_RowChangedName="LogicTableRowChanged" msprop:Generator_RowClassName="LogicTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Logic" msprop:Generator_ColumnVarNameInTable="columnLogic" msprop:Generator_ColumnPropNameInRow="Logic" msprop:Generator_ColumnPropNameInTable="LogicColumn" msprop:Generator_UserColumnName="Logic" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SortTable" msprop:Generator_TableClassName="SortTableDataTable" msprop:Generator_RowEvArgName="SortTableRowChangeEvent" msprop:Generator_TablePropName="SortTable" msprop:Generator_TableVarName="tableSortTable" msprop:Generator_RowEvHandlerName="SortTableRowChangeEventHandler" msprop:Generator_RowDeletingName="SortTableRowDeleting" msprop:Generator_RowChangingName="SortTableRowChanging" msprop:Generator_RowDeletedName="SortTableRowDeleted" msprop:Generator_UserTableName="SortTable" msprop:Generator_RowChangedName="SortTableRowChanged" msprop:Generator_RowClassName="SortTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ColumnName" msprop:Generator_ColumnVarNameInTable="columnColumnName" msprop:Generator_ColumnPropNameInRow="ColumnName" msprop:Generator_ColumnPropNameInTable="ColumnNameColumn" msprop:Generator_UserColumnName="ColumnName" type="xs:string" minOccurs="0" />
+              <xs:element name="Down" msprop:Generator_ColumnVarNameInTable="columnDown" msprop:Generator_ColumnPropNameInRow="Down" msprop:Generator_ColumnPropNameInTable="DownColumn" msprop:Generator_UserColumnName="Down" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

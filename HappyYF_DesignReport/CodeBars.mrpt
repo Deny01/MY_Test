@@ -1,0 +1,119 @@
+<?xml version='1.0'?>
+<!--Informação sobre layout do relatório-->
+<KReport Autor="Fernado Gregorio Borges" Version="0.0.0.1">
+  <Page PaperName="A4" Height="1122" Width="794" MarginTop="34" MarginBottom="38" MarginLeft="38" MarginRigth="38" LandScape="False" MasterDataSource="DataSourceTeste" />
+  <Band Type="BandHeader" Name="Header" Top="0" Height="377">
+    <control Name="RLine3" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="49" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="49" Left="3" Height="5" Width="780" />
+    </control>
+    <control Name="RLine1" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="99" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="99" Left="2" Height="5" Width="780" />
+    </control>
+    <control Name="RLine13" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="144" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="144" Left="1" Height="5" Width="783" />
+    </control>
+    <control Name="RLine4" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="311" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="311" Left="3" Height="10" Width="780" />
+    </control>
+    <control Name="RLine2" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="77" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="77" Left="5" Height="5" Width="780" />
+    </control>
+    <control Name="RLine7" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="101" Index="0" Alignment="2" LineStyle="0" LineWeight="1">
+      <Position Top="101" Left="181" Height="45" Width="5" />
+    </control>
+    <control Name="RLine5" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="123" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="123" Left="2" Height="5" Width="780" />
+    </control>
+    <control Name="RLine8" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="50" Index="0" Alignment="2" LineStyle="0" LineWeight="1">
+      <Position Top="50" Left="562" Height="212" Width="5" />
+    </control>
+    <control Name="RLine6" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="262" Index="0" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="262" Left="4" Height="10" Width="780" />
+    </control>
+    <control Name="RLine14" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="100" Index="0" Alignment="2" LineStyle="0" LineWeight="1">
+      <Position Top="100" Left="276" Height="44" Width="5" />
+    </control>
+    <control Name="RLabel5" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="297" Index="1" Text="Sacador/Avalista" Alignment="1">
+      <Position Top="297" Left="5" Height="13" Width="106" />
+      <Font Name="Arial" Size="6" Height="10" FontStyle="Bold" />
+    </control>
+    <control Name="RLine12" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="217" Index="1" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="217" Left="564" Height="10" Width="217" />
+    </control>
+    <control Name="RLine10" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="169" Index="1" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="169" Left="564" Height="5" Width="219" />
+    </control>
+    <control Name="RLabel3" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="62" Index="1" Text="PAGAVEL EM QUALQUER AGENCIA ATÉ O VENCIMENTO" Alignment="1">
+      <Position Top="62" Left="4" Height="14" Width="433" />
+      <Font Name="Times New Roman" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+    <control Name="RLine11" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="193" Index="1" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="193" Left="564" Height="8" Width="219" />
+    </control>
+    <control Name="RLabel4" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="80" Index="1" Text="Cedente" Alignment="1">
+      <Position Top="80" Left="3" Height="10" Width="40" />
+      <Font Name="Arial" Size="6" Height="10" FontStyle="Regular" />
+    </control>
+    <control Name="RLabel8" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="54" Index="1" Text="Vencimento" Alignment="1">
+      <Position Top="54" Left="568" Height="13" Width="49" />
+      <Font Name="Arial" Size="6" Height="10" FontStyle="Regular" />
+    </control>
+    <control Name="RLabel15" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="29" Index="1" Text="00190.0000.00000.08998789.099898.0909989.898989000000" Alignment="1">
+      <Position Top="29" Left="265" Height="19" Width="514" />
+      <Font Name="Arial" Size="13" Height="20" FontStyle="Regular" />
+    </control>
+    <control Name="RLine16" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="20" Index="1" Alignment="2" LineStyle="0" LineWeight="1">
+      <Position Top="20" Left="205" Height="30" Width="7" />
+    </control>
+    <control Name="RLine9" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="241" Index="1" Alignment="0" LineStyle="0" LineWeight="1">
+      <Position Top="241" Left="564" Height="10" Width="219" />
+    </control>
+    <control Name="RLabel11" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="103" Index="1" Text="N do Documento" Alignment="1">
+      <Position Top="103" Left="185" Height="12" Width="67" />
+      <Font Name="Arial" Size="6" Height="10" FontStyle="Regular" />
+    </control>
+    <control Name="RImage1" Type="RImage" BackColor="White" ForeColor="Black" xRelative="0" yRelative="16" Index="1" BorderColor="Transparent" BorderWidth="0" FileName="" Stretch="False">
+      <Position Top="16" Left="5" Height="31" Width="121" />
+    </control>
+    <control Name="RBarCode1" Type="RBarCode" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="317" Index="1" Text="" Code="00194372500001351199414318427600200001582818" BarCodeType="3">
+      <Position Top="317" Left="7" Height="58" Width="440" />
+      <Font Name="Microsoft Sans Serif" Size="8,25" Height="13" FontStyle="Regular" />
+    </control>
+    <control Name="RLabel6" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="266" Index="1" Text="Sacado" Alignment="1">
+      <Position Top="266" Left="4" Height="13" Width="106" />
+      <Font Name="Arial" Size="6" Height="10" FontStyle="Bold" />
+    </control>
+    <control Name="RLabel7" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="52" Index="1" Text="Local de Pagamento" Alignment="1">
+      <Position Top="52" Left="4" Height="10" Width="106" />
+      <Font Name="Arial" Size="6" Height="10" FontStyle="Regular" />
+    </control>
+    <control Name="RLabel9" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="148" Index="1" Text="Instruções" Alignment="1">
+      <Position Top="148" Left="4" Height="11" Width="71" />
+      <Font Name="Arial" Size="6" Height="10" FontStyle="Regular" />
+    </control>
+    <control Name="RLabel10" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="314" Index="1" Text="Autenticação Mecânica" Alignment="1">
+      <Position Top="314" Left="505" Height="12" Width="89" />
+      <Font Name="Arial" Size="6" Height="10" FontStyle="Regular" />
+    </control>
+    <control Name="RLabel13" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="102" Index="1" Text="Data do Documento" Alignment="2">
+      <Position Top="102" Left="4" Height="11" Width="71" />
+      <Font Name="Arial" Size="6" Height="10" FontStyle="Regular" />
+    </control>
+    <control Name="RLabel12" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="315" Index="1" Text="Ficha de Compensação" Alignment="1">
+      <Position Top="315" Left="644" Height="14" Width="138" />
+      <Font Name="Arial" Size="8" Height="13" FontStyle="Bold" />
+    </control>
+    <control Name="RLabel1" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="185" Index="1" Text="* NÃO RECEBER APÓS A DATA DE VENCIMENTO" Alignment="1">
+      <Position Top="185" Left="8" Height="19" Width="413" />
+      <Font Name="Arial" Size="12" Height="19" FontStyle="Bold" />
+    </control>
+    <control Name="RLine15" Type="RLine" BackColor="White" ForeColor="Black" xRelative="0" yRelative="20" Index="1" Alignment="2" LineStyle="0" LineWeight="1">
+      <Position Top="20" Left="256" Height="30" Width="7" />
+    </control>
+    <control Name="RLabel14" Type="RLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="30" Index="1" Text="001-9" Alignment="2">
+      <Position Top="29" Left="209" Height="19" Width="41" />
+      <Font Name="Arial" Size="11" Height="17" FontStyle="Bold" />
+    </control>
+  </Band>
+  <Band Type="BandDetail" Name="Detalhe" Top="393" Height="0" />
+</KReport>

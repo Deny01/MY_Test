@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SumCard_DataSet" targetNamespace="http://tempuri.org/SumCard_DataSet.xsd" xmlns:mstns="http://tempuri.org/SumCard_DataSet.xsd" xmlns="http://tempuri.org/SumCard_DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HappyYFConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HappyYFConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HappyYF.YuanXin.Properties.Settings.GlobalReference.Default.HappyYFConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Sum_Count_ViewTableAdapter" GeneratorDataComponentClassName="Sum_Count_ViewTableAdapter" Name="Sum_Count_View" UserDataComponentName="Sum_Count_ViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HappyYFConnectionString (Settings)" DbObjectName="HappyYF_HQ.dbo.Sum_Count_View" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Card_number, Name, allmoney, stdmoney, card_balance, card_discount, 
+      allincomemoney, realmoney, real_balance, hadread_stdmoney, hadread_realmoney, 
+      hadread_discount, gender, age, birthday, school, grade, parentname, 
+      parentworkplace, state, sys_date, Address, Phone
+FROM Sum_Count_View</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Card_number" DataSetColumn="卡号" />
+              <Mapping SourceColumn="Name" DataSetColumn="姓名" />
+              <Mapping SourceColumn="allmoney" DataSetColumn="卡面金额" />
+              <Mapping SourceColumn="allincomemoney" DataSetColumn="实充金额" />
+              <Mapping SourceColumn="stdmoney" DataSetColumn="标准学费" />
+              <Mapping SourceColumn="realmoney" DataSetColumn="实收学费" />
+              <Mapping SourceColumn="hadread_stdmoney" DataSetColumn="已上应收" />
+              <Mapping SourceColumn="hadread_realmoney" DataSetColumn="已上实收" />
+              <Mapping SourceColumn="gender" DataSetColumn="性别" />
+              <Mapping SourceColumn="age" DataSetColumn="年龄" />
+              <Mapping SourceColumn="birthday" DataSetColumn="生日" />
+              <Mapping SourceColumn="school" DataSetColumn="学校" />
+              <Mapping SourceColumn="grade" DataSetColumn="年级" />
+              <Mapping SourceColumn="parentname" DataSetColumn="家长姓名" />
+              <Mapping SourceColumn="parentworkplace" DataSetColumn="家长单位" />
+              <Mapping SourceColumn="state" DataSetColumn="是否退卡" />
+              <Mapping SourceColumn="sys_date" DataSetColumn="办卡时间" />
+              <Mapping SourceColumn="Address" DataSetColumn="家庭住址" />
+              <Mapping SourceColumn="Phone" DataSetColumn="联系电话" />
+              <Mapping SourceColumn="card_balance" DataSetColumn="卡面余额" />
+              <Mapping SourceColumn="card_discount" DataSetColumn="本卡折扣" />
+              <Mapping SourceColumn="real_balance" DataSetColumn="实充余额" />
+              <Mapping SourceColumn="hadread_discount" DataSetColumn="已上折扣" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Sum_queryTableAdapter" GeneratorDataComponentClassName="Sum_queryTableAdapter" Name="Sum_query" UserDataComponentName="Sum_queryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HappyYFConnectionString (Settings)" DbObjectName="HappyYF_ZB.dbo.Sum_query" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Card_number, ISNULL(ClassId, '') AS ClassId, times, 
+      schooling - tuition AS discount, schooling, std_singleprice, tuition, real_singleprice, 
+      real_singleprice * (ISNULL(classtimes, 0) + giveup_classtimes) AS real_money, 
+      ISNULL(tuition, 0) - real_singleprice * (ISNULL(classtimes, 0) + giveup_classtimes) 
+      AS left_real_money, ISNULL(classtimes, 0) AS classtimes, std_classtimes, 
+      mis_classtimes, Name, ItemofserviceName, ClassState, state, yhmc, parentname, 
+      Phone, times - ISNULL(classtimes, 0) - giveup_classtimes AS left_times, 
+      giveup_classtimes, StudyTimes
+FROM Sum_query
+WHERE (ClassId IS NOT NULL)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Card_number" DataSetColumn="卡号" />
+              <Mapping SourceColumn="ClassId" DataSetColumn="班号" />
+              <Mapping SourceColumn="times" DataSetColumn="已报课时" />
+              <Mapping SourceColumn="schooling" DataSetColumn="标准学费" />
+              <Mapping SourceColumn="std_singleprice" DataSetColumn="标准课费" />
+              <Mapping SourceColumn="tuition" DataSetColumn="实交学费" />
+              <Mapping SourceColumn="real_singleprice" DataSetColumn="实际课费" />
+              <Mapping SourceColumn="classtimes" DataSetColumn="已上课时" />
+              <Mapping SourceColumn="std_classtimes" DataSetColumn="上课次数" />
+              <Mapping SourceColumn="mis_classtimes" DataSetColumn="补课次数" />
+              <Mapping SourceColumn="Name" DataSetColumn="姓名" />
+              <Mapping SourceColumn="ItemofserviceName" DataSetColumn="班级名称" />
+              <Mapping SourceColumn="ClassState" DataSetColumn="班级状态" />
+              <Mapping SourceColumn="state" DataSetColumn="在读" />
+              <Mapping SourceColumn="yhmc" DataSetColumn="教师" />
+              <Mapping SourceColumn="real_money" DataSetColumn="已用学费" />
+              <Mapping SourceColumn="left_real_money" DataSetColumn="剩余学费" />
+              <Mapping SourceColumn="discount" DataSetColumn="折扣" />
+              <Mapping SourceColumn="parentname" DataSetColumn="家长姓名" />
+              <Mapping SourceColumn="Phone" DataSetColumn="联系电话" />
+              <Mapping SourceColumn="left_times" DataSetColumn="剩余课时" />
+              <Mapping SourceColumn="giveup_classtimes" DataSetColumn="放弃课时" />
+              <Mapping SourceColumn="StudyTimes" DataSetColumn="标准课时" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="change_classTableAdapter" GeneratorDataComponentClassName="change_classTableAdapter" Name="change_class" UserDataComponentName="change_classTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HappyYFConnectionString (Settings)" DbObjectName="HappyYF_ZB.dbo.Sum_query" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Card_number, ISNULL(ClassId, '') AS ClassId, times, 
+      schooling - tuition AS discount, schooling, std_singleprice, tuition, real_singleprice, 
+      real_singleprice * (ISNULL(classtimes, 0) + giveup_classtimes) AS real_money, 
+      tuition - real_singleprice * (ISNULL(classtimes, 0) + giveup_classtimes) 
+      AS left_real_money, ISNULL(classtimes, 0) AS classtimes, std_classtimes, 
+      mis_classtimes, Name, ItemofserviceName, ClassState, state, yhmc, parentname, 
+      Phone, times - ISNULL(classtimes, 0) - giveup_classtimes AS left_times, 
+      giveup_classtimes
+FROM Sum_query
+WHERE (ClassId IS NOT NULL) AND (ClassId = @ClassId_out) AND 
+      (Card_number NOT IN
+          (SELECT CardNumber
+         FROM HQ_classStudent
+         WHERE (state = 'Y') AND (ClassId = @ClassId_in))) AND (state = 'Y')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="ClassId_out" ColumnName="ISNULL(ClassId, '')" DataSourceName="" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@ClassId_out" Precision="0" Scale="0" Size="30" SourceColumn="ClassId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="ClassId_in" ColumnName="ISNULL(ClassId, '')" DataSourceName="" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@ClassId_in" Precision="0" Scale="0" Size="30" SourceColumn="ClassId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Card_number" DataSetColumn="卡号" />
+              <Mapping SourceColumn="ClassId" DataSetColumn="班号" />
+              <Mapping SourceColumn="times" DataSetColumn="课时" />
+              <Mapping SourceColumn="discount" DataSetColumn="折扣" />
+              <Mapping SourceColumn="schooling" DataSetColumn="标准学费" />
+              <Mapping SourceColumn="std_singleprice" DataSetColumn="标准课费" />
+              <Mapping SourceColumn="tuition" DataSetColumn="实交学费" />
+              <Mapping SourceColumn="real_singleprice" DataSetColumn="实际课费" />
+              <Mapping SourceColumn="real_money" DataSetColumn="已用学费" />
+              <Mapping SourceColumn="left_real_money" DataSetColumn="剩余学费" />
+              <Mapping SourceColumn="classtimes" DataSetColumn="已上课时" />
+              <Mapping SourceColumn="std_classtimes" DataSetColumn="上课次数" />
+              <Mapping SourceColumn="mis_classtimes" DataSetColumn="补课次数" />
+              <Mapping SourceColumn="Name" DataSetColumn="姓名" />
+              <Mapping SourceColumn="ItemofserviceName" DataSetColumn="班级名称" />
+              <Mapping SourceColumn="ClassState" DataSetColumn="班级状态" />
+              <Mapping SourceColumn="state" DataSetColumn="在读" />
+              <Mapping SourceColumn="yhmc" DataSetColumn="教师" />
+              <Mapping SourceColumn="parentname" DataSetColumn="家长姓名" />
+              <Mapping SourceColumn="Phone" DataSetColumn="联系电话" />
+              <Mapping SourceColumn="left_times" DataSetColumn="剩余课时" />
+              <Mapping SourceColumn="giveup_classtimes" DataSetColumn="放弃课时" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Sum_query1TableAdapter" GeneratorDataComponentClassName="Sum_query1TableAdapter" Name="Sum_query1" UserDataComponentName="Sum_query1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HappyYFConnectionString (Settings)" DbObjectName="HappyYF_ZB.dbo.Sum_query" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Card_number AS 卡号, ISNULL(ClassId, '') AS 班号, times AS 课时, 
+      schooling - tuition AS 折扣, schooling AS 标准学费, std_singleprice AS 标准课费, 
+      tuition AS 实交学费, real_singleprice AS 实际课费, 
+      real_singleprice * (ISNULL(classtimes, 0) + giveup_classtimes) AS 已用学费, 
+      tuition - real_singleprice * (ISNULL(classtimes, 0) + giveup_classtimes) AS 剩余学费, 
+      ISNULL(classtimes, 0) AS 已上课时, std_classtimes AS 上课次数, 
+      mis_classtimes AS 补课次数, Name AS 姓名, ItemofserviceName AS 班级名称, 
+      ClassState AS 班级状态, state AS 在读, yhmc AS 教师, parentname AS 家长姓名, 
+      Phone AS 联系电话, times - ISNULL(classtimes, 0) - giveup_classtimes AS 剩余课时, 
+      giveup_classtimes AS 放弃课时
+FROM Sum_query
+WHERE (ClassId IS NOT NULL) AND (ClassId = @ClassId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="ClassId" ColumnName="ClassId" DataSourceName="HappyYF_ZB.dbo.Sum_query" DataTypeServer="nvarchar(30)" DbType="String" Direction="Input" ParameterName="@ClassId" Precision="0" ProviderType="NVarChar" Scale="0" Size="30" SourceColumn="ClassId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="卡号" DataSetColumn="卡号" />
+              <Mapping SourceColumn="班号" DataSetColumn="班号" />
+              <Mapping SourceColumn="课时" DataSetColumn="课时" />
+              <Mapping SourceColumn="折扣" DataSetColumn="折扣" />
+              <Mapping SourceColumn="标准学费" DataSetColumn="标准学费" />
+              <Mapping SourceColumn="标准课费" DataSetColumn="标准课费" />
+              <Mapping SourceColumn="实交学费" DataSetColumn="实交学费" />
+              <Mapping SourceColumn="实际课费" DataSetColumn="实际课费" />
+              <Mapping SourceColumn="已用学费" DataSetColumn="已用学费" />
+              <Mapping SourceColumn="剩余学费" DataSetColumn="剩余学费" />
+              <Mapping SourceColumn="已上课时" DataSetColumn="已上课时" />
+              <Mapping SourceColumn="上课次数" DataSetColumn="上课次数" />
+              <Mapping SourceColumn="补课次数" DataSetColumn="补课次数" />
+              <Mapping SourceColumn="姓名" DataSetColumn="姓名" />
+              <Mapping SourceColumn="班级名称" DataSetColumn="班级名称" />
+              <Mapping SourceColumn="班级状态" DataSetColumn="班级状态" />
+              <Mapping SourceColumn="在读" DataSetColumn="在读" />
+              <Mapping SourceColumn="教师" DataSetColumn="教师" />
+              <Mapping SourceColumn="家长姓名" DataSetColumn="家长姓名" />
+              <Mapping SourceColumn="联系电话" DataSetColumn="联系电话" />
+              <Mapping SourceColumn="剩余课时" DataSetColumn="剩余课时" />
+              <Mapping SourceColumn="放弃课时" DataSetColumn="放弃课时" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SumCard_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="SumCard_DataSet" msprop:Generator_DataSetName="SumCard_DataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Sum_Count_View" msprop:Generator_UserTableName="Sum_Count_View" msprop:Generator_RowDeletedName="Sum_Count_ViewRowDeleted" msprop:Generator_RowChangedName="Sum_Count_ViewRowChanged" msprop:Generator_RowClassName="Sum_Count_ViewRow" msprop:Generator_RowChangingName="Sum_Count_ViewRowChanging" msprop:Generator_RowEvArgName="Sum_Count_ViewRowChangeEvent" msprop:Generator_RowEvHandlerName="Sum_Count_ViewRowChangeEventHandler" msprop:Generator_TableClassName="Sum_Count_ViewDataTable" msprop:Generator_TableVarName="tableSum_Count_View" msprop:Generator_RowDeletingName="Sum_Count_ViewRowDeleting" msprop:Generator_TablePropName="Sum_Count_View">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="卡号" msprop:Generator_UserColumnName="卡号" msprop:Generator_ColumnVarNameInTable="column卡号" msprop:Generator_ColumnPropNameInRow="卡号" msprop:Generator_ColumnPropNameInTable="卡号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="姓名" msprop:Generator_UserColumnName="姓名" msprop:Generator_ColumnVarNameInTable="column姓名" msprop:Generator_ColumnPropNameInRow="姓名" msprop:Generator_ColumnPropNameInTable="姓名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="卡面金额" msprop:Generator_UserColumnName="卡面金额" msprop:Generator_ColumnVarNameInTable="column卡面金额" msprop:Generator_ColumnPropNameInRow="卡面金额" msprop:Generator_ColumnPropNameInTable="卡面金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="实充金额" msprop:Generator_UserColumnName="实充金额" msprop:Generator_ColumnVarNameInTable="column实充金额" msprop:Generator_ColumnPropNameInRow="实充金额" msprop:Generator_ColumnPropNameInTable="实充金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="标准学费" msprop:Generator_UserColumnName="标准学费" msprop:Generator_ColumnVarNameInTable="column标准学费" msprop:Generator_ColumnPropNameInRow="标准学费" msprop:Generator_ColumnPropNameInTable="标准学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="实收学费" msprop:Generator_UserColumnName="实收学费" msprop:Generator_ColumnVarNameInTable="column实收学费" msprop:Generator_ColumnPropNameInRow="实收学费" msprop:Generator_ColumnPropNameInTable="实收学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="已上应收" msprop:Generator_UserColumnName="已上应收" msprop:Generator_ColumnVarNameInTable="column已上应收" msprop:Generator_ColumnPropNameInRow="已上应收" msprop:Generator_ColumnPropNameInTable="已上应收Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="已上实收" msprop:Generator_UserColumnName="已上实收" msprop:Generator_ColumnVarNameInTable="column已上实收" msprop:Generator_ColumnPropNameInRow="已上实收" msprop:Generator_ColumnPropNameInTable="已上实收Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="性别" msprop:Generator_UserColumnName="性别" msprop:Generator_ColumnVarNameInTable="column性别" msprop:Generator_ColumnPropNameInRow="性别" msprop:Generator_ColumnPropNameInTable="性别Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="年龄" msprop:Generator_UserColumnName="年龄" msprop:Generator_ColumnVarNameInTable="column年龄" msprop:Generator_ColumnPropNameInRow="年龄" msprop:Generator_ColumnPropNameInTable="年龄Column" type="xs:int" minOccurs="0" />
+              <xs:element name="生日" msprop:Generator_UserColumnName="生日" msprop:Generator_ColumnVarNameInTable="column生日" msprop:Generator_ColumnPropNameInRow="生日" msprop:Generator_ColumnPropNameInTable="生日Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="学校" msprop:Generator_UserColumnName="学校" msprop:Generator_ColumnVarNameInTable="column学校" msprop:Generator_ColumnPropNameInRow="学校" msprop:Generator_ColumnPropNameInTable="学校Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="年级" msprop:Generator_UserColumnName="年级" msprop:Generator_ColumnVarNameInTable="column年级" msprop:Generator_ColumnPropNameInRow="年级" msprop:Generator_ColumnPropNameInTable="年级Column" type="xs:int" minOccurs="0" />
+              <xs:element name="家长姓名" msprop:Generator_UserColumnName="家长姓名" msprop:Generator_ColumnVarNameInTable="column家长姓名" msprop:Generator_ColumnPropNameInRow="家长姓名" msprop:Generator_ColumnPropNameInTable="家长姓名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="家长单位" msprop:Generator_UserColumnName="家长单位" msprop:Generator_ColumnVarNameInTable="column家长单位" msprop:Generator_ColumnPropNameInRow="家长单位" msprop:Generator_ColumnPropNameInTable="家长单位Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="是否退卡" msprop:Generator_UserColumnName="是否退卡" msprop:Generator_ColumnVarNameInTable="column是否退卡" msprop:Generator_ColumnPropNameInRow="是否退卡" msprop:Generator_ColumnPropNameInTable="是否退卡Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="办卡时间" msprop:Generator_UserColumnName="办卡时间" msprop:Generator_ColumnVarNameInTable="column办卡时间" msprop:Generator_ColumnPropNameInRow="办卡时间" msprop:Generator_ColumnPropNameInTable="办卡时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="家庭住址" msprop:Generator_UserColumnName="家庭住址" msprop:Generator_ColumnVarNameInTable="column家庭住址" msprop:Generator_ColumnPropNameInRow="家庭住址" msprop:Generator_ColumnPropNameInTable="家庭住址Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="联系电话" msprop:Generator_UserColumnName="联系电话" msprop:Generator_ColumnVarNameInTable="column联系电话" msprop:Generator_ColumnPropNameInRow="联系电话" msprop:Generator_ColumnPropNameInTable="联系电话Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="卡面余额" msdata:ReadOnly="true" msprop:Generator_UserColumnName="卡面余额" msprop:Generator_ColumnPropNameInRow="卡面余额" msprop:Generator_ColumnVarNameInTable="column卡面余额" msprop:Generator_ColumnPropNameInTable="卡面余额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="本卡折扣" msdata:ReadOnly="true" msprop:Generator_UserColumnName="本卡折扣" msprop:Generator_ColumnPropNameInRow="本卡折扣" msprop:Generator_ColumnVarNameInTable="column本卡折扣" msprop:Generator_ColumnPropNameInTable="本卡折扣Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="实充余额" msdata:ReadOnly="true" msprop:Generator_UserColumnName="实充余额" msprop:Generator_ColumnPropNameInRow="实充余额" msprop:Generator_ColumnVarNameInTable="column实充余额" msprop:Generator_ColumnPropNameInTable="实充余额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="已上折扣" msdata:ReadOnly="true" msprop:Generator_UserColumnName="已上折扣" msprop:Generator_ColumnPropNameInRow="已上折扣" msprop:Generator_ColumnVarNameInTable="column已上折扣" msprop:Generator_ColumnPropNameInTable="已上折扣Column" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sum_query" msprop:Generator_UserTableName="Sum_query" msprop:Generator_RowDeletedName="Sum_queryRowDeleted" msprop:Generator_RowChangedName="Sum_queryRowChanged" msprop:Generator_RowClassName="Sum_queryRow" msprop:Generator_RowChangingName="Sum_queryRowChanging" msprop:Generator_RowEvArgName="Sum_queryRowChangeEvent" msprop:Generator_RowEvHandlerName="Sum_queryRowChangeEventHandler" msprop:Generator_TableClassName="Sum_queryDataTable" msprop:Generator_TableVarName="tableSum_query" msprop:Generator_RowDeletingName="Sum_queryRowDeleting" msprop:Generator_TablePropName="Sum_query">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="卡号" msprop:Generator_UserColumnName="卡号" msprop:Generator_ColumnVarNameInTable="column卡号" msprop:Generator_ColumnPropNameInRow="卡号" msprop:Generator_ColumnPropNameInTable="卡号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="班号" msprop:Generator_UserColumnName="班号" msprop:Generator_ColumnVarNameInTable="column班号" msprop:Generator_ColumnPropNameInRow="班号" msprop:Generator_ColumnPropNameInTable="班号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="已报课时" msprop:Generator_UserColumnName="已报课时" msprop:Generator_ColumnVarNameInTable="column已报课时" msprop:Generator_ColumnPropNameInRow="已报课时" msprop:Generator_ColumnPropNameInTable="已报课时Column" type="xs:int" minOccurs="0" />
+              <xs:element name="标准学费" msprop:Generator_UserColumnName="标准学费" msprop:Generator_ColumnVarNameInTable="column标准学费" msprop:Generator_ColumnPropNameInRow="标准学费" msprop:Generator_ColumnPropNameInTable="标准学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="标准课费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="标准课费" msprop:Generator_ColumnVarNameInTable="column标准课费" msprop:Generator_ColumnPropNameInRow="标准课费" msprop:Generator_ColumnPropNameInTable="标准课费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="实交学费" msprop:Generator_UserColumnName="实交学费" msprop:Generator_ColumnVarNameInTable="column实交学费" msprop:Generator_ColumnPropNameInRow="实交学费" msprop:Generator_ColumnPropNameInTable="实交学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="实际课费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="实际课费" msprop:Generator_ColumnVarNameInTable="column实际课费" msprop:Generator_ColumnPropNameInRow="实际课费" msprop:Generator_ColumnPropNameInTable="实际课费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="已上课时" msprop:Generator_UserColumnName="已上课时" msprop:Generator_ColumnVarNameInTable="column已上课时" msprop:Generator_ColumnPropNameInRow="已上课时" msprop:Generator_ColumnPropNameInTable="已上课时Column" type="xs:int" minOccurs="0" />
+              <xs:element name="上课次数" msprop:Generator_UserColumnName="上课次数" msprop:Generator_ColumnVarNameInTable="column上课次数" msprop:Generator_ColumnPropNameInRow="上课次数" msprop:Generator_ColumnPropNameInTable="上课次数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="补课次数" msprop:Generator_UserColumnName="补课次数" msprop:Generator_ColumnVarNameInTable="column补课次数" msprop:Generator_ColumnPropNameInRow="补课次数" msprop:Generator_ColumnPropNameInTable="补课次数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="姓名" msprop:Generator_UserColumnName="姓名" msprop:Generator_ColumnVarNameInTable="column姓名" msprop:Generator_ColumnPropNameInRow="姓名" msprop:Generator_ColumnPropNameInTable="姓名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="班级名称" msprop:Generator_UserColumnName="班级名称" msprop:Generator_ColumnVarNameInTable="column班级名称" msprop:Generator_ColumnPropNameInRow="班级名称" msprop:Generator_ColumnPropNameInTable="班级名称Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="班级状态" msprop:Generator_UserColumnName="班级状态" msprop:Generator_ColumnVarNameInTable="column班级状态" msprop:Generator_ColumnPropNameInRow="班级状态" msprop:Generator_ColumnPropNameInTable="班级状态Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="在读" msprop:Generator_UserColumnName="在读" msprop:Generator_ColumnVarNameInTable="column在读" msprop:Generator_ColumnPropNameInRow="在读" msprop:Generator_ColumnPropNameInTable="在读Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="教师" msprop:Generator_UserColumnName="教师" msprop:Generator_ColumnVarNameInTable="column教师" msprop:Generator_ColumnPropNameInRow="教师" msprop:Generator_ColumnPropNameInTable="教师Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="已用学费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="已用学费" msprop:Generator_ColumnVarNameInTable="column已用学费" msprop:Generator_ColumnPropNameInRow="已用学费" msprop:Generator_ColumnPropNameInTable="已用学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="剩余学费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="剩余学费" msprop:Generator_ColumnVarNameInTable="column剩余学费" msprop:Generator_ColumnPropNameInRow="剩余学费" msprop:Generator_ColumnPropNameInTable="剩余学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="折扣" msdata:ReadOnly="true" msprop:Generator_UserColumnName="折扣" msprop:Generator_ColumnPropNameInRow="折扣" msprop:Generator_ColumnVarNameInTable="column折扣" msprop:Generator_ColumnPropNameInTable="折扣Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="家长姓名" msprop:Generator_UserColumnName="家长姓名" msprop:Generator_ColumnVarNameInTable="column家长姓名" msprop:Generator_ColumnPropNameInRow="家长姓名" msprop:Generator_ColumnPropNameInTable="家长姓名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="联系电话" msprop:Generator_UserColumnName="联系电话" msprop:Generator_ColumnVarNameInTable="column联系电话" msprop:Generator_ColumnPropNameInRow="联系电话" msprop:Generator_ColumnPropNameInTable="联系电话Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="剩余课时" msdata:ReadOnly="true" msprop:Generator_UserColumnName="剩余课时" msprop:Generator_ColumnPropNameInRow="剩余课时" msprop:Generator_ColumnVarNameInTable="column剩余课时" msprop:Generator_ColumnPropNameInTable="剩余课时Column" type="xs:int" minOccurs="0" />
+              <xs:element name="放弃课时" msdata:ReadOnly="true" msprop:Generator_UserColumnName="放弃课时" msprop:Generator_ColumnVarNameInTable="column放弃课时" msprop:Generator_ColumnPropNameInRow="放弃课时" msprop:Generator_ColumnPropNameInTable="放弃课时Column" type="xs:int" minOccurs="0" />
+              <xs:element name="标准课时" msprop:Generator_UserColumnName="标准课时" msprop:Generator_ColumnPropNameInRow="标准课时" msprop:Generator_ColumnVarNameInTable="column标准课时" msprop:Generator_ColumnPropNameInTable="标准课时Column" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="change_class" msprop:Generator_UserTableName="change_class" msprop:Generator_RowDeletedName="change_classRowDeleted" msprop:Generator_RowChangedName="change_classRowChanged" msprop:Generator_RowClassName="change_classRow" msprop:Generator_RowChangingName="change_classRowChanging" msprop:Generator_RowEvArgName="change_classRowChangeEvent" msprop:Generator_RowEvHandlerName="change_classRowChangeEventHandler" msprop:Generator_TableClassName="change_classDataTable" msprop:Generator_TableVarName="tablechange_class" msprop:Generator_RowDeletingName="change_classRowDeleting" msprop:Generator_TablePropName="change_class">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="卡号" msprop:Generator_UserColumnName="卡号" msprop:Generator_ColumnPropNameInRow="卡号" msprop:Generator_ColumnVarNameInTable="column卡号" msprop:Generator_ColumnPropNameInTable="卡号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="班号" msdata:ReadOnly="true" msprop:Generator_UserColumnName="班号" msprop:Generator_ColumnPropNameInRow="班号" msprop:Generator_ColumnVarNameInTable="column班号" msprop:Generator_ColumnPropNameInTable="班号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="课时" msprop:Generator_UserColumnName="课时" msprop:Generator_ColumnPropNameInRow="课时" msprop:Generator_ColumnVarNameInTable="column课时" msprop:Generator_ColumnPropNameInTable="课时Column" type="xs:int" minOccurs="0" />
+              <xs:element name="折扣" msdata:ReadOnly="true" msprop:Generator_UserColumnName="折扣" msprop:Generator_ColumnPropNameInRow="折扣" msprop:Generator_ColumnVarNameInTable="column折扣" msprop:Generator_ColumnPropNameInTable="折扣Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="标准学费" msprop:Generator_UserColumnName="标准学费" msprop:Generator_ColumnPropNameInRow="标准学费" msprop:Generator_ColumnVarNameInTable="column标准学费" msprop:Generator_ColumnPropNameInTable="标准学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="标准课费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="标准课费" msprop:Generator_ColumnPropNameInRow="标准课费" msprop:Generator_ColumnVarNameInTable="column标准课费" msprop:Generator_ColumnPropNameInTable="标准课费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="实交学费" msprop:Generator_UserColumnName="实交学费" msprop:Generator_ColumnPropNameInRow="实交学费" msprop:Generator_ColumnVarNameInTable="column实交学费" msprop:Generator_ColumnPropNameInTable="实交学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="实际课费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="实际课费" msprop:Generator_ColumnPropNameInRow="实际课费" msprop:Generator_ColumnVarNameInTable="column实际课费" msprop:Generator_ColumnPropNameInTable="实际课费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="已用学费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="已用学费" msprop:Generator_ColumnPropNameInRow="已用学费" msprop:Generator_ColumnVarNameInTable="column已用学费" msprop:Generator_ColumnPropNameInTable="已用学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="剩余学费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="剩余学费" msprop:Generator_ColumnPropNameInRow="剩余学费" msprop:Generator_ColumnVarNameInTable="column剩余学费" msprop:Generator_ColumnPropNameInTable="剩余学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="已上课时" msdata:ReadOnly="true" msprop:Generator_UserColumnName="已上课时" msprop:Generator_ColumnPropNameInRow="已上课时" msprop:Generator_ColumnVarNameInTable="column已上课时" msprop:Generator_ColumnPropNameInTable="已上课时Column" type="xs:int" minOccurs="0" />
+              <xs:element name="上课次数" msprop:Generator_UserColumnName="上课次数" msprop:Generator_ColumnPropNameInRow="上课次数" msprop:Generator_ColumnVarNameInTable="column上课次数" msprop:Generator_ColumnPropNameInTable="上课次数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="补课次数" msprop:Generator_UserColumnName="补课次数" msprop:Generator_ColumnPropNameInRow="补课次数" msprop:Generator_ColumnVarNameInTable="column补课次数" msprop:Generator_ColumnPropNameInTable="补课次数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="姓名" msprop:Generator_UserColumnName="姓名" msprop:Generator_ColumnPropNameInRow="姓名" msprop:Generator_ColumnVarNameInTable="column姓名" msprop:Generator_ColumnPropNameInTable="姓名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="班级名称" msprop:Generator_UserColumnName="班级名称" msprop:Generator_ColumnPropNameInRow="班级名称" msprop:Generator_ColumnVarNameInTable="column班级名称" msprop:Generator_ColumnPropNameInTable="班级名称Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="班级状态" msprop:Generator_UserColumnName="班级状态" msprop:Generator_ColumnPropNameInRow="班级状态" msprop:Generator_ColumnVarNameInTable="column班级状态" msprop:Generator_ColumnPropNameInTable="班级状态Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="在读" msprop:Generator_UserColumnName="在读" msprop:Generator_ColumnPropNameInRow="在读" msprop:Generator_ColumnVarNameInTable="column在读" msprop:Generator_ColumnPropNameInTable="在读Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="教师" msprop:Generator_UserColumnName="教师" msprop:Generator_ColumnPropNameInRow="教师" msprop:Generator_ColumnVarNameInTable="column教师" msprop:Generator_ColumnPropNameInTable="教师Column" type="xs:string" minOccurs="0" />
+              <xs:element name="家长姓名" msprop:Generator_UserColumnName="家长姓名" msprop:Generator_ColumnPropNameInRow="家长姓名" msprop:Generator_ColumnVarNameInTable="column家长姓名" msprop:Generator_ColumnPropNameInTable="家长姓名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="联系电话" msprop:Generator_UserColumnName="联系电话" msprop:Generator_ColumnPropNameInRow="联系电话" msprop:Generator_ColumnVarNameInTable="column联系电话" msprop:Generator_ColumnPropNameInTable="联系电话Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="剩余课时" msdata:ReadOnly="true" msprop:Generator_UserColumnName="剩余课时" msprop:Generator_ColumnPropNameInRow="剩余课时" msprop:Generator_ColumnVarNameInTable="column剩余课时" msprop:Generator_ColumnPropNameInTable="剩余课时Column" type="xs:int" minOccurs="0" />
+              <xs:element name="放弃课时" msdata:ReadOnly="true" msprop:Generator_UserColumnName="放弃课时" msprop:Generator_ColumnPropNameInRow="放弃课时" msprop:Generator_ColumnVarNameInTable="column放弃课时" msprop:Generator_ColumnPropNameInTable="放弃课时Column" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sum_query1" msprop:Generator_UserTableName="Sum_query1" msprop:Generator_RowDeletedName="Sum_query1RowDeleted" msprop:Generator_RowChangedName="Sum_query1RowChanged" msprop:Generator_RowClassName="Sum_query1Row" msprop:Generator_RowChangingName="Sum_query1RowChanging" msprop:Generator_RowEvArgName="Sum_query1RowChangeEvent" msprop:Generator_RowEvHandlerName="Sum_query1RowChangeEventHandler" msprop:Generator_TableClassName="Sum_query1DataTable" msprop:Generator_TableVarName="tableSum_query1" msprop:Generator_RowDeletingName="Sum_query1RowDeleting" msprop:Generator_TablePropName="Sum_query1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="卡号" msprop:Generator_UserColumnName="卡号" msprop:Generator_ColumnVarNameInTable="column卡号" msprop:Generator_ColumnPropNameInRow="卡号" msprop:Generator_ColumnPropNameInTable="卡号Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="班号" msdata:ReadOnly="true" msprop:Generator_UserColumnName="班号" msprop:Generator_ColumnVarNameInTable="column班号" msprop:Generator_ColumnPropNameInRow="班号" msprop:Generator_ColumnPropNameInTable="班号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="课时" msprop:Generator_UserColumnName="课时" msprop:Generator_ColumnVarNameInTable="column课时" msprop:Generator_ColumnPropNameInRow="课时" msprop:Generator_ColumnPropNameInTable="课时Column" type="xs:int" minOccurs="0" />
+              <xs:element name="折扣" msdata:ReadOnly="true" msprop:Generator_UserColumnName="折扣" msprop:Generator_ColumnVarNameInTable="column折扣" msprop:Generator_ColumnPropNameInRow="折扣" msprop:Generator_ColumnPropNameInTable="折扣Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="标准学费" msprop:Generator_UserColumnName="标准学费" msprop:Generator_ColumnVarNameInTable="column标准学费" msprop:Generator_ColumnPropNameInRow="标准学费" msprop:Generator_ColumnPropNameInTable="标准学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="标准课费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="标准课费" msprop:Generator_ColumnVarNameInTable="column标准课费" msprop:Generator_ColumnPropNameInRow="标准课费" msprop:Generator_ColumnPropNameInTable="标准课费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="实交学费" msprop:Generator_UserColumnName="实交学费" msprop:Generator_ColumnVarNameInTable="column实交学费" msprop:Generator_ColumnPropNameInRow="实交学费" msprop:Generator_ColumnPropNameInTable="实交学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="实际课费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="实际课费" msprop:Generator_ColumnVarNameInTable="column实际课费" msprop:Generator_ColumnPropNameInRow="实际课费" msprop:Generator_ColumnPropNameInTable="实际课费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="已用学费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="已用学费" msprop:Generator_ColumnVarNameInTable="column已用学费" msprop:Generator_ColumnPropNameInRow="已用学费" msprop:Generator_ColumnPropNameInTable="已用学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="剩余学费" msdata:ReadOnly="true" msprop:Generator_UserColumnName="剩余学费" msprop:Generator_ColumnVarNameInTable="column剩余学费" msprop:Generator_ColumnPropNameInRow="剩余学费" msprop:Generator_ColumnPropNameInTable="剩余学费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="已上课时" msdata:ReadOnly="true" msprop:Generator_UserColumnName="已上课时" msprop:Generator_ColumnVarNameInTable="column已上课时" msprop:Generator_ColumnPropNameInRow="已上课时" msprop:Generator_ColumnPropNameInTable="已上课时Column" type="xs:int" minOccurs="0" />
+              <xs:element name="上课次数" msprop:Generator_UserColumnName="上课次数" msprop:Generator_ColumnVarNameInTable="column上课次数" msprop:Generator_ColumnPropNameInRow="上课次数" msprop:Generator_ColumnPropNameInTable="上课次数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="补课次数" msprop:Generator_UserColumnName="补课次数" msprop:Generator_ColumnVarNameInTable="column补课次数" msprop:Generator_ColumnPropNameInRow="补课次数" msprop:Generator_ColumnPropNameInTable="补课次数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="姓名" msprop:Generator_UserColumnName="姓名" msprop:Generator_ColumnVarNameInTable="column姓名" msprop:Generator_ColumnPropNameInRow="姓名" msprop:Generator_ColumnPropNameInTable="姓名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="班级名称" msprop:Generator_UserColumnName="班级名称" msprop:Generator_ColumnVarNameInTable="column班级名称" msprop:Generator_ColumnPropNameInRow="班级名称" msprop:Generator_ColumnPropNameInTable="班级名称Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="班级状态" msprop:Generator_UserColumnName="班级状态" msprop:Generator_ColumnVarNameInTable="column班级状态" msprop:Generator_ColumnPropNameInRow="班级状态" msprop:Generator_ColumnPropNameInTable="班级状态Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="在读" msprop:Generator_UserColumnName="在读" msprop:Generator_ColumnVarNameInTable="column在读" msprop:Generator_ColumnPropNameInRow="在读" msprop:Generator_ColumnPropNameInTable="在读Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="教师" msprop:Generator_UserColumnName="教师" msprop:Generator_ColumnVarNameInTable="column教师" msprop:Generator_ColumnPropNameInRow="教师" msprop:Generator_ColumnPropNameInTable="教师Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="家长姓名" msprop:Generator_UserColumnName="家长姓名" msprop:Generator_ColumnVarNameInTable="column家长姓名" msprop:Generator_ColumnPropNameInRow="家长姓名" msprop:Generator_ColumnPropNameInTable="家长姓名Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="联系电话" msprop:Generator_UserColumnName="联系电话" msprop:Generator_ColumnVarNameInTable="column联系电话" msprop:Generator_ColumnPropNameInRow="联系电话" msprop:Generator_ColumnPropNameInTable="联系电话Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="剩余课时" msdata:ReadOnly="true" msprop:Generator_UserColumnName="剩余课时" msprop:Generator_ColumnVarNameInTable="column剩余课时" msprop:Generator_ColumnPropNameInRow="剩余课时" msprop:Generator_ColumnPropNameInTable="剩余课时Column" type="xs:int" minOccurs="0" />
+              <xs:element name="放弃课时" msdata:ReadOnly="true" msprop:Generator_UserColumnName="放弃课时" msprop:Generator_ColumnVarNameInTable="column放弃课时" msprop:Generator_ColumnPropNameInRow="放弃课时" msprop:Generator_ColumnPropNameInTable="放弃课时Column" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Sum_Count_View" />
+      <xs:field xpath="mstns:卡号" />
+    </xs:unique>
+    <xs:unique name="Sum_query_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Sum_query" />
+      <xs:field xpath="mstns:卡号" />
+      <xs:field xpath="mstns:班号" />
+    </xs:unique>
+    <xs:unique name="change_class_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:change_class" />
+      <xs:field xpath="mstns:卡号" />
+      <xs:field xpath="mstns:班号" />
+    </xs:unique>
+    <xs:unique name="Sum_query1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Sum_query1" />
+      <xs:field xpath="mstns:卡号" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

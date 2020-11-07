@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<!--Informação sobre layout do relatório-->
+<KReport Autor="Fernado Gregorio Borges" Version="0.0.0.1">
+  <Page PaperName="A4" Height="1123" Width="794" MarginTop="38" MarginBottom="38" MarginLeft="38" MarginRigth="38" LandScape="False" MasterDataSource="" />
+  <Band Type="BandTitle" Name="表头" Top="0" Height="25" />
+  <Band Type="BandDetail" Name="细节区" Top="41" Height="30">
+    <control Name="RDBLabel2" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="209" yRelative="11" Index="1" Text="" Alignment="2" FieldName="车号" DataSource="HT_Vehicle_collect" FormatString="">
+      <Position Top="44" Left="209" Height="18" Width="186" />
+      <Font Name="宋体" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+    <control Name="RDBLabel1" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="21" yRelative="5" Index="1" Text="" Alignment="2" FieldName="车主" DataSource="HT_Vehicle_collect" FormatString="">
+      <Position Top="46" Left="21" Height="15" Width="83" />
+      <Font Name="宋体" Size="9" Height="14" FontStyle="Regular" />
+    </control>
+  </Band>
+</KReport>

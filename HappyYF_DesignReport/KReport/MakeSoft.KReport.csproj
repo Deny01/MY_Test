@@ -1,0 +1,478 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14DEBF70-7F99-4D77-AAAB-F170D1D41DFA}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>MakeSoft.KReport</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/MakeSoft.KReport/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\AboutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\ControlBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\ControlBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\ControlBox_Select.cs" />
+    <Compile Include="KReport\Controls\DataSourceDefault.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\FieldNameDefault.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\IRDBControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\LineAlignment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\LineStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RBarCode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RDBBarCode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RDBCalculated.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RDBChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RDBImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RDBLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\ReportElementAttribute.cs" />
+    <Compile Include="KReport\Controls\RImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RMemo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RSystem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RSystemType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\Ruler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\RulerOrientation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\TextAlignment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\TypeCalculated.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Controls\Units.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Designer\ControlViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandDesigner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandDetalhe.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandFooder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandGroupFooder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandGroupHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandTitle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BandType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\BeforePrintControlEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ControlPrintView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ControlScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ControlType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\CustomControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\DesignerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\DeviceEndPrintEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\DevicePageCompletedEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\DevicePageGenerateEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\DeviceStartPrintEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\FactoryDevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\FormDataSource.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\FormGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\FormPageSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\FormPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\FormPreviewScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\IReportData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\IReportDevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\PageHoriention.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\PrintControlEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\Report.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportCompletedEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportControlEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportDataCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportDataFieldInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportDataList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportDataTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportDevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportDeviceFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportDevicePrintDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportDevicePrinter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportDevicePrintToPDF.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportDeviceScreen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportGroupCompletedEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportGroupStartEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportPageCompletedEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportPageStartEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportStartEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportTemplateXML.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\ReportTypeDevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\RPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\SortBand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\SortControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\SubReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Engine\Utils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\Forms\FormEditMemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KReport\Forms\FormFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KReport\HappyReport.cs" />
+    <Compile Include="KReport\Properties\Resources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KReport\UndoRedo\BandsChangedUndoAction.cs" />
+    <Compile Include="KReport\UndoRedo\ComponentAddedUndoAction.cs" />
+    <Compile Include="KReport\UndoRedo\ComponentChangedUndoAction.cs" />
+    <Compile Include="KReport\UndoRedo\ComponentRemovedUndoAction.cs" />
+    <Compile Include="KReport\UndoRedo\DesignerTransaction.cs" />
+    <Compile Include="KReport\UndoRedo\IUndoableOperation.cs" />
+    <Compile Include="KReport\UndoRedo\SelectComponentsUndoAction.cs" />
+    <Compile Include="KReport\UndoRedo\StringStack.cs" />
+    <Compile Include="KReport\UndoRedo\UndoHandler.cs" />
+    <Compile Include="KReport\UndoRedo\UndoQueue.cs" />
+    <Compile Include="KReport\UndoRedo\UndoStack.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="KReport.Engine.ControlPrintView.resources" />
+    <EmbeddedResource Include="KReport.Engine.ControlScreen.resources" />
+    <EmbeddedResource Include="KReport.Engine.FormDataSource.resources" />
+    <EmbeddedResource Include="KReport.Properties.Resources.resources" />
+    <EmbeddedResource Include="KReport\AboutReport.resx">
+      <DependentUpon>AboutReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KReport\Designer\ControlViewer.resx">
+      <DependentUpon>ControlViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KReport\Engine\DesignerReport.resx">
+      <DependentUpon>DesignerReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KReport\Engine\FormGroup.resx">
+      <DependentUpon>FormGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KReport\Engine\FormPageSetting.resx">
+      <DependentUpon>FormPageSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KReport\Engine\FormPreview.resx">
+      <DependentUpon>FormPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KReport\Engine\FormPreviewScreen.resx">
+      <DependentUpon>FormPreviewScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KReport\Forms\FormEditMemo.resx">
+      <DependentUpon>FormEditMemo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KReport\Forms\FormFormat.resx">
+      <DependentUpon>FormFormat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MakeSoft\MakeSoft.Tools.csproj">
+      <Project>{D35B44D3-E5B3-47F8-8005-FF9A92AA1012}</Project>
+      <Name>MakeSoft.Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="KReport\NewFolder1\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="Denynew_chyConnectionString">
+      <ConnectionProperties>
+        <ConnectString>Data Source=DENY;Initial Catalog=new_chy;User ID=sa;Connect Timeout=1200</ConnectString>
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>4176c525-65bc-4ede-a2e3-3d76d5969c65</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <Height>5cm</Height>
+  </Body>
+  <rd:ReportID>850354bb-66c4-4d18-84e0-22ff4a44d2fa</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="HuochangpandianDataSet_t_stoc_stocktak">
+      <rd:DataSetInfo>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:DataSetName>HuochangpandianDataSet</rd:DataSetName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterName>t_stoc_stocktakTableAdapter</rd:TableAdapterName>
+        <rd:TableName>t_stoc_stocktak</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText>SELECT         id_num, year_no, factory, billno, parent_item, parent_desc, item_code, 
+                          short_desc, checkqty, reviseqty, unit, warehouse, locate, remark
+FROM             t_stoc_stocktak
+WHERE         (year_no = '2005')</CommandText>
+        <DataSourceName>Denynew_chyConnectionString</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="id_num">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>id_num</DataField>
+        </Field>
+        <Field Name="年份">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>年份</DataField>
+        </Field>
+        <Field Name="廠別">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>廠別</DataField>
+        </Field>
+        <Field Name="盤點票號">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>盤點票號</DataField>
+        </Field>
+        <Field Name="父件">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>父件</DataField>
+        </Field>
+        <Field Name="parent_desc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>parent_desc</DataField>
+        </Field>
+        <Field Name="item_code">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>item_code</DataField>
+        </Field>
+        <Field Name="short_desc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>short_desc</DataField>
+        </Field>
+        <Field Name="checkqty">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>checkqty</DataField>
+        </Field>
+        <Field Name="reviseqty">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>reviseqty</DataField>
+        </Field>
+        <Field Name="unit">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>unit</DataField>
+        </Field>
+        <Field Name="warehouse">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>warehouse</DataField>
+        </Field>
+        <Field Name="locate">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>locate</DataField>
+        </Field>
+        <Field Name="remark">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>remark</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>21.33333cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

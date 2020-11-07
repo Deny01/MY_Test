@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TGZJ.DATA.SQLDataBase">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAgAAAAIAAAAAAAEAAAAAAAAAAAAAAQAAAAEAAAA=</HashCode>
+      <FileName>DATA\SQLDataBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="TGZJ.DATA.IN_Database">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAgAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>DATA\IN_Database.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TGZJ.Base.IN_User">
+    <Position X="0.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQIAAQAACAAQAAAEAAAACAAAABAAAAAA=</HashCode>
+      <FileName>Base\User.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<!--Informação sobre layout do relatório-->
+<KReport Autor="Fernado Gregorio Borges" Version="0.0.0.1">
+  <Page Height="1123" Width="794" MarginTop="38" MarginBottom="38" MarginLeft="38" MarginRigth="38" LandScape="False" MasterDataSource="" />
+  <Band Type="BandTitle" Name="Title" Top="0" Height="340">
+    <control Name="RBarCode2" Type="RBarCode" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="260" Index="1" Text="" Code="0123456789" BarCodeType="0">
+      <Position Top="260" Left="-4" Height="47" Width="251" />
+      <Font Name="Microsoft Sans Serif" Size="8,25" Height="13" FontStyle="Regular" />
+    </control>
+    <control Name="RBarCode1" Type="RBarCode" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="35" Index="1" Text="" Code="0123456789" BarCodeType="5">
+      <Position Top="35" Left="62" Height="58" Width="219" />
+      <Font Name="Microsoft Sans Serif" Size="8,25" Height="13" FontStyle="Regular" />
+    </control>
+  </Band>
+  <Band Type="BandDetail" Name="Detalhe" Top="356" Height="0" />
+</KReport>

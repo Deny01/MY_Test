@@ -1,0 +1,18 @@
+<?xml version='1.0'?>
+<!--Informação sobre layout do relatório-->
+<KReport Autor="Fernado Gregorio Borges" Version="0.0.0.1">
+  <Page Height="1123" Width="794" MarginTop="38" MarginBottom="38" MarginLeft="38" MarginRigth="38" LandScape="False" MasterDataSource="ListaPessoa" />
+  <Band Type="BandDetail" Name="Detalhe" Top="0" Height="202">
+    <control Name="RDBLabel2" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="27" Index="1" Text="Fernando8" Alignment="2" FieldName="Nome" DataSource="ListaPessoa" FormatString="">
+      <Position Top="27" Left="155" Height="60" Width="227" />
+      <Font Name="Microsoft Sans Serif" Size="28" Height="43" FontStyle="Regular" />
+    </control>
+    <control Name="RDBLabel1" Type="RDBLabel" BackColor="Window" ForeColor="ControlText" xRelative="0" yRelative="25" Index="1" Text="8" Alignment="2" FieldName="Codigo" DataSource="ListaPessoa" FormatString="">
+      <Position Top="25" Left="55" Height="62" Width="74" />
+      <Font Name="Microsoft Sans Serif" Size="46" Height="70" FontStyle="Regular" />
+    </control>
+    <control Name="RDBImage1" Type="RDBImage" BackColor="White" ForeColor="Black" xRelative="0" yRelative="2" Index="1" BorderColor="Black" BorderWidth="1" FileName="" Stretch="False" FieldName="Foto" DataSource="ListaPessoa">
+      <Position Top="2" Left="515" Height="150" Width="265" />
+    </control>
+  </Band>
+</KReport>
